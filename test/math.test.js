@@ -75,6 +75,14 @@ describe("average", () => {
   it("handles decimal results", () => {
     assert.equal(average([1, 2]), 1.5);
   });
+
+  it("averages only numeric values in mixed arrays", () => {
+    assert.equal(average([1, "two", 3]), 2);
+  });
+
+  it("returns 0 for array with no numeric values", () => {
+    assert.equal(average(["a", "b", "c"]), 0);
+  });
 });
 
 describe("factorial", () => {

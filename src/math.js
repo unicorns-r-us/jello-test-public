@@ -13,13 +13,18 @@ function sum(arr) {
 
 function average(arr) {
   if (!Array.isArray(arr) || arr.length === 0) return 0;
-  return sum(arr) / arr.length;
+  const numbers = arr.filter((val) => typeof val === "number");
+  if (numbers.length === 0) return 0;
+  return sum(numbers) / numbers.length;
 }
 
 function factorial(n) {
   if (typeof n !== "number" || n < 0 || !Number.isInteger(n)) return undefined;
-  if (n === 0 || n === 1) return 1;
-  return n * factorial(n - 1);
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
 }
 
 module.exports = { clamp, sum, average, factorial };
