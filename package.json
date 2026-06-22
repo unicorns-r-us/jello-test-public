@@ -1,0 +1,11 @@
+{
+  "name": "jello-test-public",
+  "version": "1.0.0",
+  "description": "Jello public test project",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
